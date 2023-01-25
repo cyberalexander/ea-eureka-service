@@ -72,6 +72,8 @@
     </dependencies>
 
     <build>
+        <finalName>${project.artifactId}</finalName> <!-- added to remove Version from WAR file -->
+
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -93,7 +95,7 @@
                             <outputDirectory>${basedir}/target/docker</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>${basedir}</directory>
+                                    <directory>src/main/docker</directory>
                                     <filtering>true</filtering>
                                 </resource>
                             </resources>
