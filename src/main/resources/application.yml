@@ -3,4 +3,18 @@ server:
 
 eureka:
   client:
-    registerWithEureka: false
+    registerWithEureka: false                        #[1]
+    fetch-registry: false                            #[2]
+    service-url:
+      default-zone: http://localhost:8761/           #[3]
+  server:
+    wait-time-in-ms-when-sync-empty: 5
+
+#[1] eureka.client.registerWithEureka controls whether this client registers itself and therefore becomes
+# discoverable. This alone does not imply that this client is going to fetch the information on other services'
+# endpoints and therefore being able to connect to them.
+#
+#[2] eureka.client.fetch-registry controls, whether this client is going to try to connect to the Eureka
+# server(s) in order to download the information on other services' endpoint. It can do so without registering itself.
+#
+#[3] eureka.client.service-url.default-zone - location of the Eureka Service.
