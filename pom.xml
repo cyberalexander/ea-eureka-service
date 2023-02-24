@@ -34,7 +34,7 @@
 
     <groupId>com.eagle.eye.eureka</groupId>
     <artifactId>ea-eureka-service</artifactId>
-    <version>2023.1.0-SNAPSHOT</version>
+    <version>2023.2.24-SNAPSHOT</version>
     <name>ea-eureka-service</name>
     <description>Eureka Service</description>
 
@@ -62,11 +62,12 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <version>3.0.3</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

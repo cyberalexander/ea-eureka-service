@@ -3,10 +3,10 @@ server:
 
 eureka:
   client:
-    registerWithEureka: false                        #[1]
-    fetch-registry: false                            #[2]
+    registerWithEureka: true                        #[1]
+    fetch-registry: true                            #[2]
     service-url:
-      default-zone: http://localhost:8761/           #[3]
+      default-zone: http://localhost:8761/eureka/           #[3]
   server:
     wait-time-in-ms-when-sync-empty: 5
 

@@ -9,4 +9,4 @@ The service responsible for the other microservices registration and balancing i
 GET http://<eureka service>:8761/eureka/apps/<APPID>
 ```
 For instance, to see the organization service in the registry you can call
-`http:// localhost:8761/eureka/apps/ea-organisation-service`
+`GET http://localhost:8761/eureka/apps/ea-organisation-service`
