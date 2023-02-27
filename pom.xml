@@ -29,18 +29,18 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.0</version>
+        <version>3.0.3</version>
     </parent>
 
     <groupId>com.eagle.eye.eureka</groupId>
     <artifactId>ea-eureka-service</artifactId>
-    <version>2023.2.24-SNAPSHOT</version>
+    <version>2023.2.27-SNAPSHOT</version>
     <name>ea-eureka-service</name>
     <description>Eureka Service</description>
 
     <properties>
         <java.version>17</java.version>
-        <spring-cloud.version>2021.0.3</spring-cloud.version>
+        <spring-cloud.version>2022.0.1</spring-cloud.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <start-class>com.eagle.eye.eureka.eaeurekaservice.EaEurekaServiceApplication</start-class>
         <docker.image.name>cyberalexander/ea-eureka-service</docker.image.name>
@@ -82,11 +82,12 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.0.3</version>
             </plugin>
 
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.3.0</version>
                 <executions>
                     <execution>
                         <id>copy-resources</id>
