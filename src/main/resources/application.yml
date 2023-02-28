@@ -20,18 +20,24 @@ eureka:
     hostname: localhost
     prefer-ip-address: true
   client:
-    registerWithEureka: false                        #[1]
-    fetch-registry: false                            #[2]
+    registerWithEureka: true #[1]
+    fetch-registry: false #[2]
     service-url:
-      default-zone: ${eureka_url:http://localhost:8761/eureka}    #[3]
+      default-zone: ${eureka_url:http://localhost:8761/eureka} #[3]
   server:
-    wait-time-in-ms-when-sync-empty: 5
+    wait-time-in-ms-when-sync-empty: 5 #[4]
 
-#[1] eureka.client.registerWithEureka controls whether this client registers itself and therefore becomes
+# Configuration Documentation
+# [1] eureka.client.registerWithEureka controls whether this client registers itself and therefore becomes
 # discoverable. This alone does not imply that this client is going to fetch the information on other services'
 # endpoints and therefore being able to connect to them.
 #
-#[2] eureka.client.fetch-registry controls, whether this client is going to try to connect to the Eureka
+# [2] eureka.client.fetch-registry controls, whether this client is going to try to connect to the Eureka
 # server(s) in order to download the information on other services' endpoint. It can do so without registering itself.
 #
-#[3] eureka.client.service-url.default-zone - location of the Eureka Service.
+# [3] eureka.client.service-url.default-zone - location of the Eureka Service.
+#
+# [4] wait-time-in-ms-when-sync-empty - initial time to wait before server takes requests
+#
+# [5] management.endpoints.web.exposure.include - to change which endpoints are exposed
+# @see https://docs.spring.io/spring-boot/docs/2.1.11.RELEASE/reference/html/production-ready-endpoints.html#production-ready-endpoints-exposing-endpoints
