@@ -2,7 +2,7 @@
 <!--
  ~ MIT License
  ~
- ~ Copyright (c) 2022-2023 cyberalexander
+ ~ Copyright (c) 2022-2023 CyberAlexander
  ~
  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
  ~ of this software and associated documentation files (the "Software"), to deal
@@ -34,7 +34,7 @@
 
     <groupId>com.eagle.eye.eureka</groupId>
     <artifactId>ea-eureka-service</artifactId>
-    <version>2023.2.28-SNAPSHOT</version>
+    <version>2023.3.22-SNAPSHOT</version>
     <name>ea-eureka-service</name>
     <description>Eureka Discovery Service</description>
 
@@ -86,6 +86,7 @@
             </plugin>
 
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>3.3.0</version>
                 <executions>
